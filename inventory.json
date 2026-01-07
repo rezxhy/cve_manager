@@ -1,0 +1,156 @@
+[
+  {
+    "name": "Ubuntu Server",
+    "version": "22.04 LTS",
+    "quantity": 5,
+    "cpe": "cpe:2.3:o:canonical:ubuntu_linux:22.04:lts",
+    "category": "Serveurs"
+  },
+  {
+    "name": "Windows Server",
+    "version": "2019",
+    "quantity": 3,
+    "cpe": "cpe:2.3:o:microsoft:windows_server_2019",
+    "category": "Serveurs"
+  },
+  {
+    "name": "Debian",
+    "version": "11 (Bullseye)",
+    "quantity": 2,
+    "cpe": "cpe:2.3:o:debian:debian_linux:11.0",
+    "category": "Serveurs"
+  },
+  {
+    "name": "VMware ESXi",
+    "version": "7.0 U3",
+    "quantity": 2,
+    "cpe": "cpe:2.3:o:vmware:esxi:7.0:update3",
+    "category": "Serveurs"
+  },
+  {
+    "name": "Apache HTTP",
+    "version": "2.4.54",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:apache:http_server:2.4.54",
+    "category": "Applications"
+  },
+  {
+    "name": "Nginx",
+    "version": "1.24.0",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:f5:nginx:1.24.0",
+    "category": "Applications"
+  },
+  {
+    "name": "MySQL",
+    "version": "8.0.33",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:oracle:mysql:8.0.33",
+    "category": "Applications"
+  },
+  {
+    "name": "PostgreSQL",
+    "version": "15.3",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:postgresql:postgresql:15.3",
+    "category": "Applications"
+  },
+  {
+    "name": "OpenSSH",
+    "version": "9.0p1",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:openbsd:openssh:9.0p1",
+    "category": "Applications"
+  },
+  {
+    "name": "Docker",
+    "version": "24.0.2",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:docker:docker:24.0.2",
+    "category": "Applications"
+  },
+  {
+    "name": "Grafana",
+    "version": "9.5.3",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:grafana:grafana:9.5.3",
+    "category": "Applications"
+  },
+  {
+    "name": "GitLab CE",
+    "version": "16.0.1 community",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:gitlab:gitlab:16.0.1:community",
+    "category": "Applications"
+  },
+  {
+    "name": "Jenkins",
+    "version": "2.401.1 LTS",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:jenkins:jenkins:2.401.1:lts",
+    "category": "Applications"
+  },
+  {
+    "name": "Cisco IOS XE",
+    "version": "17.6.3",
+    "quantity": 2,
+    "cpe": "cpe:2.3:o:cisco:ios_xe:17.6.3",
+    "category": "Réseau"
+  },
+  {
+    "name": "Fortinet FortiOS",
+    "version": "7.2.4",
+    "quantity": 1,
+    "cpe": "cpe:2.3:o:fortinet:fortios:7.2.4",
+    "category": "Réseau"
+  },
+  {
+    "name": "pfSense",
+    "version": "2.7.0",
+    "quantity": 1,
+    "cpe": "cpe:2.3:a:netgate:pfsense:2.7.0",
+    "category": "Réseau"
+  },
+  {
+    "name": "Windows 11 Pro",
+    "version": "22H2",
+    "quantity": 100,
+    "cpe": "cpe:2.3:o:microsoft:windows_11:22h2",
+    "category": "Postes de travail"
+  },
+  {
+    "name": "macOS Ventura",
+    "version": "13.4",
+    "quantity": 30,
+    "cpe": "cpe:2.3:o:apple:macos:13.4",
+    "category": "Postes de travail"
+  },
+  {
+    "name": "Google Chrome",
+    "version": "114.0.5735",
+    "quantity": 130,
+    "cpe": "cpe:2.3:a:google:chrome:114.0.5735",
+    "category": "Postes de travail"
+  },
+  {
+    "name": "Mozilla Firefox",
+    "version": "115.0",
+    "quantity": 80,
+    "cpe": "cpe:2.3:a:mozilla:firefox:115.0",
+    "category": "Postes de travail"
+  },
+  {
+    "name": "Microsoft Office",
+    "version": "2021 LTSC",
+    "quantity": 130,
+    "cpe": "cpe:2.3:a:microsoft:office:2021:ltsc",
+    "category": "Postes de travail"
+  },
+  {
+    "name": "Visual Studio Code",
+    "version": "1.79.2",
+    "quantity": 50,
+    "cpe": "cpe:2.3:a:microsoft:visual_studio_code:1.79.2",
+    "category": "Postes de travail"
+  }
+]
