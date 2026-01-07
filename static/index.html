@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du Parc - TechNova Solutions</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <header class="main-header">
+        <h1>Gestion du Parc Informatique - TechNova Solutions</h1>
+    </header>
+
+    <div class="container">
+        <div class="grid-layout">
+            <section class="management-section">
+		<div style="margin-bottom: 20px;">
+                	<button id="refresh-btn" class="btn-primary" onclick="triggerRefresh()" style="background: #10b981; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                    	🔄 Actualiser la base NVD
+                	</button>
+            	</div>
+
+                <h2>Ajouter un équipement</h2>
+                <div class="form-card">
+                    <div class="input-group">
+                        <input type="text" id="name" placeholder="Nom (ex: Ubuntu Server)" required>
+                        <input type="text" id="cpe" placeholder="CPE (ex: cpe:2.3:o:canonical...)" required>
+                    </div>
+                    <button class="btn-primary" onclick="addEquipment()">Ajouter au parc</button>
+                </div>
+
+                <h2>Liste des équipements</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Nom</th>
+                                <th>CPE</th>
+                                <th>CVE</th>
+                                <th>Criticité</th>
+                                <th>Actions</th>
+                            </tr>
+                        </thead>
+                        <tbody id="equipments-body">
+                            </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <aside class="dashboard-section">
+                <div class="stats-row">
+    			<div class="stat-card">
+        			<span class="stat-label">Total CVE <span id="total-cves">0</span></span>
+    			</div>
+    			<div class="stat-card">
+        			<span class="stat-label">Équipements <span id="total-equip">0</span></span>
+    			</div>
+		</div>
+                <div class="chart-container">
+                    <h3>Répartition par criticité</h3>
+                    <canvas id="severityChart"></canvas>
+                </div>
+
+                <div class="list-container">
+                    <h3>Top 10 Critiques</h3>
+                    <div id="top-critical" class="scroll-list"></div>
+                </div>
+
+                <div class="list-container">
+                    <h3>Dernières alertes (7j)</h3>
+                    <div id="recent-cves" class="scroll-list"></div>
+                </div>
+            </aside>
+        </div>
+    </div>
+
+    <div id="cve-modal" class="modal" style="display:none;">
+    <div class="modal-content" style="width: 80%; max-width: 900px; margin: 5% auto; padding: 20px; background: white; border-radius: 8px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #eee; padding-bottom: 10px;">
+            <h2 id="modal-title" style="margin: 0;"></h2>
+            <button onclick="closeModal()" style="cursor: pointer; background: #eee; border: none; padding: 5px 10px; border-radius: 4px;">Fermer</button>
+        </div>
+        
+        <div id="modal-body-area" style="margin-top: 20px; max-height: 60vh; overflow-y: auto;">
+            </div>
+    </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+:root {
+    --primary: #2563eb;
+    --danger: #dc2626;
+    --bg: #f8fafc;
+    --card: #ffffff;
+    --border: #e2e8f0;
+}
+
+body { font-family: 'Segoe UI', sans-serif; background: var(--bg); margin: 0; padding: 0; }
+.main-header { background: #1e293b; color: white; padding: 1rem; text-align: center; }
+.container { max-width: 1300px; margin: 20px auto; padding: 0 20px; }
+.grid-layout { display: grid; grid-template-columns: 1fr 380px; gap: 20px; }
+
+/* Cartes */
+.form-card, .table-container, .chart-container, .list-container {
+    background: var(--card); 
+    padding: 15px; 
+    border-radius: 10px; 
+    border: 1px solid var(--border); 
+    margin-bottom: 20px;
+}
+
+/* Formulaire */
+.input-group { display: flex; gap: 10px; margin-bottom: 10px; }
+input { flex: 1; padding: 10px; border: 1px solid var(--border); border-radius: 5px; }
+.btn-primary { background: var(--primary); color: white; border: none; padding: 10px; border-radius: 5px; cursor: pointer; width: 100%; }
+
+/* Tableaux */
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; border-bottom: 2px solid var(--border); padding: 10px; font-size: 0.9em; }
+td { padding: 10px; border-bottom: 1px solid var(--border); }
+
+/* Badges de criticité */
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white !important;
+}
+
+.badge-critical { background-color: #7f1d1d !important; } /* Rouge Foncé */
+.badge-high     { background-color: #dc2626 !important; } /* Rouge */
+.badge-medium   { background-color: #f59e0b !important; } /* Orange */
+.badge-low      { background-color: #10b981 !important; } /* Vert */
+.badge-none     { background-color: #6b7280 !important; } /* Gris */
+
+/* */
+.btn-primary:hover {
+    filter: brightness(0.9);
+    transform: translateY(-1px);
+    transition: all 0.2s;
+}
+
+#refresh-btn {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* Dashboard - Liste défilante */
+
+/* Dashboard - Alignement côte à côte */
+.stats-row { 
+    display: flex; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+    width: 100%; /* S'assure que la ligne prend toute la largeur */
+}
+
+.stat-card { 
+    flex: 1; 
+    background: var(--card); 
+    padding: 15px 20px; 
+    border-radius: 10px; 
+    border: 1px solid var(--border); 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0; /* On annule la marge du bas pour rester aligné */
+}
+
+.stat-label { 
+    font-size: 1rem; 
+    font-weight: 500; 
+    color: #1e293b; 
+}
+
+#total-cves, #total-equip {
+    font-weight: bold;
+    margin-left: 5px;
+    color: var(--primary); /* Utilise le bleu défini dans vos variables */
+}
+
+.scroll-list { 
+    max-height: 550px;     
+    overflow-y: auto; 
+    font-size: 0.9em; 
+    padding-right: 5px; 
+}
+
+.scroll-list::-webkit-scrollbar {
+    width: 6px;
+}
+.scroll-list::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 10px;
+}
+
+/* Modale */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.5); justify-content: center; align-items: center; }
+.modal-content { background: white; padding: 20px; border-radius: 10px; width: 90%; max-height: 80vh; overflow-y: auto; }
+.modal-header { display: flex; justify-content: space-between; border-bottom: 1px solid var(--border); padding-bottom: 10px; }
+.close { cursor: pointer; font-size: 1.5rem; }
